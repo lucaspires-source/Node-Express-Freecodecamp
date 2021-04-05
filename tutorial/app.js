@@ -1,9 +1,16 @@
-const amount = 9
+//Globals - NO WINDOW!!!
 
-if (amount < 10) {
-    console.log('small number')
-}else{
-    console.log('large number')
-}
+// __dirname - path to current directory
+// __filename - file name
+// require - function to use modules (CommonJs)
+// module - info about current module (file)
+//process- info about env where the program is being executed
 
-console.log('o pai ta on')
+console.log(__dirname)
+console.log(__filename)
+console.log(require)
+console.log(module)
+console.log(process)
+setInterval(()=>{
+    console.log("oi")
+},1000)
