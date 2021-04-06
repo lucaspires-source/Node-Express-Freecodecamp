@@ -1,14 +1,8 @@
-const path = require('path')
-
-console.log(path.sep)
+const fs = require('fs')
 
 
-const filePath = path.join('/content','subfolder','test')
-
-console.log(filePath)
-
-const base=path.basename(filePath)
-console.log(base)
-
-const absolute = path.resolve(filePath)
-console.log(absolute)
+const first = fs.readFileSync('./content/first.txt', 'utf8')
+const second = fs.readFileSync('./content/subfolder/test.txt', 'utf8')
+console.log(first)
+console.log(second)
+ fs.writeFileSync('./content/result-sync.txt', 'hello world')
